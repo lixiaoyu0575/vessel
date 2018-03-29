@@ -6,7 +6,7 @@
                 <ng-template #title>周围血管科数据录入系统<span id="red"></span></ng-template>
                 <ng-template #body>
                     <nz-steps [(nzCurrent)]="current" [nzSize]="'small'" >
-                        <nz-step *ngFor="let step of schedule_list,index as i" [nzTitle]="step.status" [nzDescription]="step.descript" ></nz-step>
+                        <nz-step *ngFor="let step of schedule_list,index as i" [nzTitle]="step.status" [nzDescription]="step.descript" (click)="jumpTo(i,footer)"></nz-step>
                     </nz-steps>
                     <br/>
                     <!--<nz-input-number style="float:left;left: 20px" [nzMin]="0" [nzMax]="10" [(ngModel)]="selectedIndex"></nz-input-number>

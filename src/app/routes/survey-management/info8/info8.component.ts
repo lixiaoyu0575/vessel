@@ -17,6 +17,10 @@ export class Info8Component extends Question implements OnInit {
     nzTabPosition = 'left';
     selectedIndex = 0;
     schedule_list = new ScheduleList().schedule_list;
+    current = 8;
+    buttondisable = false;
+    finished = '';
+    currentModal;
 
     answerSet: any;
 
@@ -197,6 +201,20 @@ export class Info8Component extends Question implements OnInit {
                this.answerSet = d;
             }
         });
+    }
+
+    jumpTo(step_index , footer) {
+        const numWords = ['info0', 'info1', 'info2', 'info3', 'info4', 'info5', 'info6', 'info7', 'info8'];
+        this.httpService.putFollowUp({
+            'PID': this.PID,
+            'Record': {
+                'tabs': this.followUp.tabs
+            }
+        }).subscribe(res => {
+            console.log(res);
+            this.router.navigate(['system/survey/' + numWords[step_index] + '/' + this.PID]);
+        });
+        
     }
 
     showModalForComponent() {
