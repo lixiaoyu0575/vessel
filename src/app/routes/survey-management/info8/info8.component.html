@@ -16,6 +16,7 @@
 
 
                     <br/>
+                    <nz-spin align="center" *ngIf="loading" [nzTip]="'正在读取随访数据...'"></nz-spin>
 
                     <nz-tabset
                         [nzTabPosition]="nzTabPosition"

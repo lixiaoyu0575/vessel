@@ -19,6 +19,7 @@ export class Info8Component extends Question implements OnInit {
     schedule_list = new ScheduleList().schedule_list;
     current = 8;
     buttondisable = false;
+    loading = true;
     finished = '';
     currentModal;
 
@@ -110,10 +111,12 @@ export class Info8Component extends Question implements OnInit {
                 this.followUp.tabs.push(this.newAnswerSet(24));
                 console.log(this.followUp);
                 this.answerSet = this.followUp.tabs[0];
+                this.loading = false;
             } else {
                 this.followUp.tabs = res.Record.tabs;
                 console.log(this.followUp.tabs);
                 this.answerSet = this.followUp.tabs[0];
+                this.loading = false;
             }
         });
 
@@ -214,7 +217,7 @@ export class Info8Component extends Question implements OnInit {
             console.log(res);
             this.router.navigate(['system/survey/' + numWords[step_index] + '/' + this.PID]);
         });
-        
+
     }
 
     showModalForComponent() {
