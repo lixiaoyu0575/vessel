@@ -137,8 +137,8 @@ export class ModelRegisterComponent {
             this.valForm.controls[i].markAsDirty();
         }
         if (this.valForm.valid) {
-            console.log('Valid!');
-            console.log(this.valForm.value);
+            //console.log('Valid!');
+            //console.log(this.valForm.value);
             const submitBody = {
                 'province': this.valForm.value.province,
                 'username': this.valForm.value.userID,
@@ -147,10 +147,10 @@ export class ModelRegisterComponent {
                 'password': this.valForm.value.password,
                 'email': this.valForm.value.email
             };
-            console.log(submitBody);
+            //console.log(submitBody);
             this.service.register(submitBody)
                 .subscribe((res) => {
-                    console.log(res);
+                    //console.log(res);
                     if (res.Return === 0) {
                     this.cancel();
                     this.msg.info('注册成功');

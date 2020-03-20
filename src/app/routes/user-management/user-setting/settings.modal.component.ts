@@ -75,7 +75,7 @@ export class ModelCustomComponent {
 
     cancel() {
         this.subject.destroy();
-        console.log(this.user_group);
+        //console.log(this.user_group);
     }
 
     updateAuth() {
@@ -87,7 +87,7 @@ export class ModelCustomComponent {
         } else group = '3';
 
         this.service.updateAuth({'group': group, 'username': this.user.username}).subscribe((res) => {
-            console.log(res);
+            //console.log(res);
         });
     }
 

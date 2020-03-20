@@ -16,19 +16,19 @@ import { NzModalSubject, NzModalService, NzMessageService } from 'ng-zorro-antd'
                 姓名
             </h3>
             <p>
-                {{charactor.name}}
+                {{charactor['name']}}
             </p>
         </div>
     </div>
     <br>
     <h3>人物介绍</h3>
     <p>
-        {{charactor.introduction}}
+        {{charactor['introduction']}}
     </p>
     <br>
     <h3>人物经历</h3>
     <p>
-        {{charactor.experience}}
+        {{charactor['experience']}}
     </p>
     <div class="modal-footer">
         <button nz-button [nzType]="'default'" [nzSize]="'large'" (click)="cancel()">
