@@ -23,7 +23,7 @@ export class Record {
 @Injectable()
 export class HttpService {
 
-    baseUrl = 'http://59.110.52.133:9500';
+    baseUrl = 'http://123.56.247.133:9500';
 
     constructor(
         private http: HttpClient,
@@ -128,7 +128,7 @@ export class HttpService {
 
     getFollowUp(PID: string): Observable<any> {
         const params = {'PID': PID};
-        return this.http.get('http://59.110.52.133:9500' + '/vascular/followup/' + '?q=' + JSON.stringify(params),  {
+        return this.http.get('http://123.56.247.133:9500' + '/vascular/followup/' + '?q=' + JSON.stringify(params),  {
             headers: new HttpHeaders({'X-CSRFToken': this.injector.get(TokenService).data.access_token})
         })
             .map((res) => {
@@ -143,7 +143,7 @@ export class HttpService {
 
     putFollowUp(params: any): Observable<any> {
         console.log(params);
-        return this.http.put('http://59.110.52.133:9500' + '/vascular/followup/', params, {
+        return this.http.put('http://123.56.247.133:9500' + '/vascular/followup/', params, {
             headers: new HttpHeaders({'X-CSRFToken': this.injector.get(TokenService).data.access_token})
         })
             .map((res) => {

@@ -14,7 +14,7 @@ import { saveAs } from 'file-saver';
 @Injectable()
 export class FileDownloadService {
 
-    baseUrl = 'http://59.110.52.133:9500';
+    baseUrl = 'http://123.56.247.133:9500';
 
     constructor(
         private http: HttpClient,

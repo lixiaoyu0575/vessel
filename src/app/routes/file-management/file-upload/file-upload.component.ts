@@ -15,7 +15,7 @@ import { TokenService } from '@core/net/token/token.service';
 export class FileUploadComponent implements OnInit, AfterViewInit {
 
     uploader: FileUploader = new FileUploader({
-        url: 'http://59.110.52.133:9500/filesystem/fileop/',    // http://202.117.54.95:8888/filesystem/fileop/
+        url: 'http://123.56.247.133:9500/filesystem/fileop/',    // http://202.117.54.95:8888/filesystem/fileop/
         method: 'POST',
         itemAlias: 'File',
         autoUpload: false,

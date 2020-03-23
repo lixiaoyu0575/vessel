@@ -16,7 +16,7 @@ import 'rxjs/add/operator/delay';
 export class LoginAuthService {
     constructor(private http: HttpClient, private normalHttp: Http, private injector: Injector) {
     }
-    private Url = 'http://59.110.52.133:9500/';
+    private Url = 'http://123.56.247.133:9500/';
 
 
 
